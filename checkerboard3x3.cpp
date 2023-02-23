@@ -1,0 +1,3 @@
+//Task G
+
+#include <iostream>
