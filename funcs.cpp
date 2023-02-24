@@ -27,21 +27,21 @@ std::string checkerboard(int width, int height)
   {
     for (int col = 0; col < width; col++)
     {
-      if (row % 2 != 0 && col % 2 == 0)
-      {
-			std::cout<<" ";
-			}
-			else if (row % 2 == 0 && col % 2 != 0)
-      {
-				std::cout<<" ";
-			}
-			else
-      {
-				std::cout<<"*";
-			}
-		}
-		std::cout<<"\n";
-	}
+	    if (row % 2 != 0 && col % 2 == 0)
+	    {
+		    std::cout<<" ";
+	    }
+	    else if (row % 2 == 0 && col % 2 != 0)
+	    {
+		    std::cout<<" ";
+	    }
+	    else
+	    {
+		    std::cout<<"*";
+	    }
+    }
+	  std::cout<<"\n";
+  }
 	return shape;
 }
 
@@ -111,32 +111,31 @@ std::string upper(int upLength)
 //Task F
 std::string trapezoid(int width, int height)
 {
-  std::string shape;
-  int spaces = 0;
+	std::string shape;
+	int spaces = 0;
 	int stars = width;
-  
 	if (height>(width/2))
-  {
-			std::cout<<"Impossible shape!";
+	{
+		std::cout<<"Impossible shape!";
 	}
 	else 
-  {
-	for (int row = 0 ; row < height; row++)
-  {
-		for (int col = 0; col < spaces; col++)
-    {
-			std::cout<<" ";
-		}
-		for (int col = 0; col < stars; col++)
-    {
-			std::cout<<"*";
-		}
-    spaces += 1;
-	  stars -= 2;
-	 std::cout<<"\n";
+  	{
+		for (int row = 0 ; row < height; row++)
+  		{
+			for (int col = 0; col < spaces; col++)
+    			{
+				std::cout<<" ";
+			}
+			for (int col = 0; col < stars; col++)
+    			{
+				std::cout<<"*";
+			}
+			spaces += 1;
+	  	stars -= 2;
+	 	std::cout<<"\n";
 	} 
   }
-  return shape;
+	return shape;
 }
 
 
