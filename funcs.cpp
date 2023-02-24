@@ -5,50 +5,59 @@
 //Task A 
 std::string box(int width, int height)
 {
+  std::string shape;
   for(int row = 0; row < height; row++)
     {
+      std::string shape = "*";
       for(int col = 0; col < width; col++)
         {
-          std::cout<<"*";
+          std::cout<<shape;
         }
       std::cout<<"\n";
     }
-  return 0;
+  return shape;
 }
 
 
 //Task B 
-std::string checkerBoard(int width, int height)
+std::string checkerboard(int width, int height)
 {
-  for(int row = 0; row < height; row++)
+  std::string shape;
+  for (int row = 0; row < height; row++)
+  {
+    for (int col = 0; col < width; col++)
     {
-      for(int col = 0; col < width; col++)
-        {
-          if(col + row % 2 == 0)
-          {
-            std::cout<<" ";
-          }
-          else
-          {
-            std::cout<<"* ";
-          }
-        }
-      std::cout<<"\n";
-    }
-  return 0;
+      if (row % 2 != 0 && col % 2 == 0)
+      {
+			std::cout<<" ";
+			}
+			else if (row % 2 == 0 && col % 2 != 0)
+      {
+				std::cout<<" ";
+			}
+			else
+      {
+				std::cout<<"*";
+			}
+		}
+		std::cout<<"\n";
+	}
+	return shape;
 }
 
 
 //Task C 
 std::string cross(int size)
 {
+  std::string shape; 
   for(int row = 0; row < size; row++)
     {
       for(int col = 0; col < size; col++)
         {
           if(col==row || col == (size-1-row))
           {
-            std::cout<<"*";
+            std::string shape = "*"; 
+            std::cout<<shape;
           }
           else
           {
@@ -57,75 +66,80 @@ std::string cross(int size)
         }
       std::cout<<"\n";
     }
-  return 0;
+  return shape;
 }
 
 
 //Task D 
 std::string lower(int sideLength)
 {
+  std::string shape; 
   for (int row = 0; row < sideLength; row++)
     {
+      std::string shape = "*"; 
       for (int col = 0; col <= row; col++)
         {
-          std::cout<<"*";
+          std::cout<<shape;
         }
       std::cout<<" ";
     }
-  return 0;
+  return shape;
 }
 
 
 //Task E
 std::string upper(int upLength)
 {
+  std::string shape;
   for (int row = 0; row < upLength; row++)
     {
+      std::string shape = "*";
       for (int col = 0; col < upLength - row; col++)
         {
-          std::cout<<"*"; 
+          std::cout<<shape; 
         }
       std::cout<<"\n";
     }
-  return 0; 
+  return shape; 
 }
 
 
 //Task F
 std::string trapezoid(int width, int height)
 {
+  std::string shape;
   int spaces = 0;
-  int stars = width;
+	int stars = width;
   
-  if(height * 2 > width)
+	if (height>(width/2))
   {
-    std::cout<<"Impossible Shape\n";
-  }
-  else
+			std::cout<<"Impossible shape!";
+	}
+	else 
   {
-    for(int i = 1; i < height; i++)
+	for (int row = 0 ; row < height; row++)
+  {
+		for (int col = 0; col < spaces; col++)
     {
-      for(int j = 0; j < spaces; j++)
-      {
-        std::cout<<" ";
-      }
-      for (int j = 0; j < stars; j++)
-      {
-        std::cout<<"*";
-      }
-      
-      spaces +=1;
-      stars -= 2;
-      std::cout<<"\n";
-      }
-    }
-  return 0;
+			std::cout<<" ";
+		}
+		for (int col = 0; col < stars; col++)
+    {
+			std::cout<<"*";
+		}
+    spaces += 1;
+	  stars -= 2;
+	 std::cout<<"\n";
+	} 
+  }
+  return shape;
 }
 
 
 //Task G
 std::string checkerBoard3x3(int width, int height)
 {
+  std::string shape;
   for (int row = 0; row < height; row++)
   {
     for (int col = 0; col < width; col++)
@@ -141,5 +155,5 @@ std::string checkerBoard3x3(int width, int height)
     }
   std::cout<<"\n"; 
   }
-  return 0;
+  return shape;
 }

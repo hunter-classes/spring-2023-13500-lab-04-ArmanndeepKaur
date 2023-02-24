@@ -5,58 +5,59 @@
 int main()
 {
 //Task A 
-std::cout << box(7,4);
-std::cout << "\n------------------\n";
-std::cout << box(9,7);
-std::cout << "\n------------------\n";
-std::cout << box(6,2);
+std::string result;
+std::cout << "box(3,5):\n";
+result = box(3,5);
+std::cout << result;
 std::cout << "\n------------------\n";
 
 //Task B 
-std::cout << checkerBoard(11,6);
-std::cout << "\n------------------\n";
-std::cout << checkerBoard(12,7);
-std::cout << "\n------------------\n";
-std::cout << checkerBoard(13,8);
+std::string result1;
+std::cout << "checkerBoard(11,6):\n";
+result1 = checkerBoard(3,5);
+std::cout << result1;
 std::cout << "\n------------------\n";
 
 //Task C
-std::cout << cross(9);
-std::cout << "\n------------------\n";
-std::cout << cross(5);
-std::cout << "\n------------------\n";
-std::cout << cross(11);
+std::string result2;
+std::cout << "cross(7):\n";
+result2 = cross(7);
+std::cout << result2;
 std::cout << "\n------------------\n";
 
 //Task D 
-std::cout << lower(6);
-std::cout << "\n------------------\n";
-std::cout << lower(8);
-std::cout << "\n------------------\n";
-std::cout << lower(10);
+std::string result3;
+std::cout << "lower(8):\n";
+result3 = lower(8);
+std::cout << result3;
 std::cout << "\n------------------\n";
 
 //Task E 
-std::cout << upper(5);
-std::cout << "\n------------------\n";
-std::cout << upper(7);
-std::cout << "\n------------------\n";
-std::cout << upper(9);
+std::string result4;
+std::cout << "upper(9):\n";
+result4 = upper(9);
+std::cout << result4;
 std::cout << "\n------------------\n";
 
 //Task F 
-std::cout << trapezoid(12,5);
+std::string result5;
+std::cout << "trapezoid(12,5):\n";
+result5 = trapezoid(3,5);
+std::cout << result5;
 std::cout << "\n------------------\n";
-std::cout << trapezoid(12,7);
-std::cout << "\n------------------\n";
-std::cout << trapezoid(12,9);
+
+std::string resultF;
+std::cout<< "trapezoid(12,7)\n";
+resultF = trapezoid(12,7);
+std::cout<<resultF;
 std::cout << "\n------------------\n";
 
 //Task G
-std::cout << checkerBoard3x3(16,11);
+std::string result6;
+std::cout << "checkerBoard3x3(16,11):\n";
+result6 = checkerBoard3x3(16,11);
+std::cout << result6;
 std::cout << "\n------------------\n";
-std::cout << checkerBoard3x3(18,13);
-std::cout << "\n------------------\n";
-std::cout << checkerBoard3x3(14,10);
-std::cout << "\n------------------\n";
+
+return 0;
 }
