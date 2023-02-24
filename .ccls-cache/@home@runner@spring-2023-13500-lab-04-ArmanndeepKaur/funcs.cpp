@@ -74,10 +74,10 @@ std::string cross(int size)
 std::string lower(int sideLength)
 {
   std::string shape; 
-  for (int row = 0; row < sideLength; row++)
+  for (int row = 0; row <= sideLength; row++)
     {
       std::string shape = "*"; 
-      for (int col = 0; col <= row; col++)
+      for (int col = 0; col < row; col++)
         {
           std::cout<<shape;
         }
@@ -91,10 +91,14 @@ std::string lower(int sideLength)
 std::string upper(int upLength)
 {
   std::string shape;
-  for (int row = 0; row < upLength; row++)
+  for (int row = upLength; row >= 0; row--)
     {
       std::string shape = "*";
-      for (int col = 0; col < upLength - row; col++)
+      for (int col = upLength - row; col > 0; col--)
+        {
+          std::cout<<" ";
+        }
+      for (int x = row ; x > 0 ; x --)
         {
           std::cout<<shape; 
         }
