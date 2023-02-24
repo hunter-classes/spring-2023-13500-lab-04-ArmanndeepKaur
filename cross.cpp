@@ -1,3 +1,0 @@
-//Task C 
-
-#include <iostream>
