@@ -1,3 +1,0 @@
-//Task D 
-
-#include <iostream>
